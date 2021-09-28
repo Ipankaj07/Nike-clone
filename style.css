@@ -181,15 +181,20 @@ nav ul li {
   font-weight: 100;
 }
 
+.slide{
+ padding:10px;
+}
+
 #f1 {
-  font-weight: 600;
-  line-height: 3;
+  font-weight: 500;
+  font-size: unset;
+  line-height: 1;
 }
 #f2 {
-  font-weight: 500;
+  font-size: 13px;
 }
 #f2 u {
-  font-size: 19px;
+  font-size: 14px;
   cursor: pointer;
 }
 
