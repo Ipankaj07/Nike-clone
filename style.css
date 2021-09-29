@@ -190,7 +190,7 @@ nav ul li {
 #f1 {
   font-weight: 500;
   font-size: unset;
-  line-height: 1; 
+  line-height: 1;
 }
 #f2 {
   font-size: 13px;
@@ -221,7 +221,7 @@ nav ul li {
   margin-left: 70px;
 }
 
-.trending {
+/* .trending {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -232,7 +232,28 @@ nav ul li {
   height: 100%;
   margin: 35px 60px;
   object-fit: cover;
+} */
+
+/* two image section starts */
+
+#content {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 30px;
 }
+
+#img1 {
+  margin-right: 17px;
+  width: 45%;
+}
+#img2 {
+  /* margin-left: 5px; */
+  /* margin-right: 20px; */
+  /* object-fit: cover; */
+  width: 43.8%;
+}
+
+/* two image section End */
 
 .list-footwear {
   display: flex;
@@ -241,7 +262,7 @@ nav ul li {
   scrollbar-color: #757575 transparent;
   padding-bottom: 30px;
   transition: 0.3s;
-  margin: 10px 50px;
+  margin: 10px 55px;
 }
 .list-footwear img {
   width: 393px;
@@ -254,7 +275,7 @@ nav ul li {
 }
 
 .list-footwear span {
-  margin-left: 154px;
+  margin-left: 145px;
   margin-top: 10px;
 }
 

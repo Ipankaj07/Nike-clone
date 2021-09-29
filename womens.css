@@ -181,8 +181,12 @@ nav ul li {
   position: relative;
 }
 
+#women-menu p:hover{
+   color: #6d7175;
+}
+
 #image1 img {
-  width: 93%;
+  width: 90%;
   margin-left: 38px;
   margin-right: 38px;
   margin-bottom: 10px;
@@ -198,21 +202,12 @@ nav ul li {
   font-weight: bolder;
   /* list-style: 0.833333;
       */
-  line-height: 1.2;
+  line-height: 1.4;
   /* text-transform: uppercase; */
   letter-spacing: -5px;
   cursor: pointer;
   margin-bottom: 5px;
 }
-
-/* .heading-1 {
-   font-family: sans-serif;
-   font-size: 16px;
-   font-weight: 550;
-   line-height: 1.5;
-   cursor: pointer;
-   margin-top: 20px;
- } */
 
 .heading-0 {
   font-weight: 100;
@@ -240,18 +235,18 @@ nav ul li {
 /* footwear Section */
 
 .content-header {
-   text-align: left;
-   font-size: 22px;
-   margin-top: 80px;
-   margin-left: 70px;
- }
+  text-align: left;
+  font-size: 22px;
+  margin-top: 80px;
+  margin-left: 70px;
+}
 
 .list-footwear {
   display: flex;
   flex-direction: row;
   overflow: scroll;
   scrollbar-color: #757575 transparent;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   transition: 0.3s;
   margin: 10px 50px;
 }
@@ -280,6 +275,91 @@ nav ul li {
 .list-footwear .highlight {
   color: #111;
 }
+
+/* two image section starts */
+
+#content {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 30px;
+}
+
+#img1 {
+  margin-right: 20px;
+  width: 45%;
+}
+#img2 {
+  margin-left: 5px;
+  /* margin-right: 20px; */
+  /* object-fit: cover; */
+  width: 42.4%;
+}
+
+/* two image section End */
+
+#image2 img {
+  width: 90%;
+  margin-top: 30px;
+  /* margin-left: 38px;
+   margin-right: 38px; */
+  /* margin-bottom: 10px; */
+}
+
+#btnn2 {
+  margin-top: -18px;
+}
+
+#heading-0-line {
+  line-height: 1.3;
+}
+
+/* the essential section */
+
+.list-image {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  scrollbar-color: #757575 transparent;
+  padding-bottom: 30px;
+  transition: 0.3s;
+  margin: 10px 55px;
+}
+.list-image img {
+  width: 393px;
+  margin: 10px;
+}
+.list-image div {
+  text-align: left;
+  margin-top: 20px;
+}
+
+
+/* above footer section */
+
+#above-footer {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-left: 200px;
+   margin-right: 200px;
+   font-size: 17px;
+   margin-bottom: 40px;
+   margin-top: 110px;
+ }
+ #above-footer p{
+    /* text-align:left; */
+    margin-left: 25px;
+    margin-bottom: 40px;
+ }
+ #above-footer li {
+   text-align: left;
+   /* text-decoration: none; */
+   font-size: 15px;
+   margin: 22px;
+   color: #494b4d;
+   cursor: pointer;
+ }
+
 
 /* footer section start */
 
