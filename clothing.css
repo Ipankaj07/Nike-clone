@@ -154,22 +154,123 @@ nav ul li {
 
 /* header section end */
 
+/* ----------------------------------------------------------------------------------------- */
+
+#cloth-details {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+/* #cloth-details img:nth-child(1) {
+  width: 100%;
+  margin-top: -5px;
+} */
+
+#cloth-details img {
+  width: 100%;
+  margin-top: 35px;
+}
+
+#cloth-details p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+#cloth-details p:nth-child(2) {
+  color: orangered;
+}
+
+#cloth-details p:nth-child(4) {
+  color: #706f6f;
+}
+
+#cloth-details p:nth-child(5) {
+  color: #706f6f;
+}
+
+#text-sort {
+  display: flex;
+  flex-direction: row;
+}
+
+#text-sort p:nth-child(1) {
+  font-size: 21px;
+  text-align: left;
+  margin-left: 45px;
+  margin-top: 65px;
+}
+
+#text-sort label:nth-child(2) {
+  /* font-size: 21px; */
+  /* text-align: left; */
+  margin-left: 56%;
+  margin-right: 5px;
+  margin-top: 65px;
+}
+
+#text-sort p:nth-child(3) {
+  /* font-size: 21px; */
+  /* text-align: left; */
+  /* margin-left: 925px; */
+  margin-right: 5px;
+  margin-top: 65px;
+}
+
+#text-sort p:nth-child(4) {
+  /* font-size: 21px; */
+  /* text-align: left; */
+  margin-right: 58px;
+  margin-top: 65px;
+}
+
+#text-sort button {
+  padding: 3px;
+}
 
 /* ----------------------------------------------------------------------------------------- */
 
-#cloth-details{
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    gap: 10px;
-    justify-content:center;
+/* Related Stories Stories */
+
+.content-header {
+  text-align: left;
+  font-size: 22px;
+  margin-top: 100px;
+  margin-left: 70px;
 }
 
-#cloth-details img{
-    width: 80%;
+.list-footwear {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  scrollbar-color: #757575 transparent;
+  padding-bottom: 30px;
+  transition: 0.3s;
+  margin: 10px 55px 60px;
+}
+.list-footwear img {
+  width: 393px;
+  /* height: 440px; */
+  margin: 10px;
+}
+.list-footwear div {
+  text-align: left;
+  margin-top: 20px;
 }
 
-/* ----------------------------------------------------------------------------------------- */
+.list-footwear p {
+  margin-top: 0.5px;
+  margin-left: 12px;
+  color: #6b6e70;
+  line-height: 1.45;
+}
 
+.list-footwear .highlight {
+  color: #111;
+}
 
 /* footer section start */
 

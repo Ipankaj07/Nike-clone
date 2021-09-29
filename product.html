@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - List</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: antiquewhite;
+        }
+
+        #products {
+            border: 1px solid black;
+            height: 1700px;
+            margin: 20px;
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            grid-gap: 2%;
+            justify-content: center;
+            /* background-color:darkslategray */
+        }
+
+        img {
+            width: 70%
+        }
+    </style>
+</head>
+
+<body>
+    <a href="form.html"> <button><span>>>Product Add</span> </button></a>
+    <a href="cart.html"> <button><span>>>Go to Cart</span> </button></a>
+
+    <h1>Product List</h1>
+    <div id="products">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let parent = document.getElementById("products");
+
+    let cart = JSON.parse(localStorage.getItem("prodDetail"));
+    console.log(cart);
+
+
+    function showProducts() {
+        cart.forEach(function (product) {
+
+            let div = document.createElement('div');
+
+            let img = document.createElement('img');
+
+            img.src = product.image;
+
+            let product_price = document.createElement('p');
+
+            product_price.textContent = product.price;
+
+            let product_name = document.createElement('p');
+
+            product_name.textContent = product.name;
+
+            let addtocart_btn = document.createElement('button');
+
+            addtocart_btn.innerText = "Add to Cart";
+
+            addtocart_btn.onclick = function () {
+
+                addtoCart(product);
+
+            };
+
+            div.append(img, product_name, product_price, addtocart_btn);
+            parent.append(div);
+
+        });
+
+    }
+
+    showProducts();
+
+
+    if (localStorage.getItem("cart") === null) {
+
+        localStorage.setItem("cart", JSON.stringify([]))
+
+    }
+
+    function addtoCart(p) {
+        // alert("its ok");
+
+        // console.log("p:", p);
+
+        let products_cart = JSON.parse(localStorage.getItem("cart"));
+        //   console.log(products_cart);
+
+        products_cart.push(p);
+
+        // console.log(products_cart);
+
+        localStorage.setItem("cart", JSON.stringify(products_cart));
+
+        // console.log(products_cart);
+
+    }
+
+</script>

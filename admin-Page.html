@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Product Info</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: antiquewhite;
+        }
+
+        form {
+            width: 10%;
+        }
+
+        input {
+            margin-top: 8%;
+            padding: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="clothing.html"> <button>Product Details</button></a>
+
+    <h2>Create New Product</h2>
+    <form onsubmit="getProdDetail(event)" id="myForm" >
+        <input type="img" id="image" placeholder=" Image link" />
+        <input type="text" id="avability" placeholder="Avability" />
+        <input type="text" id="tag" placeholder="Product Tag" />
+        <input type="text" id="name" placeholder="Product name" />
+        <input type="text" id="coloraval" placeholder="Color Count" />
+        <input type="text" id="price" placeholder="Product Price" />
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+
+<script>
+    function getProdDetail(e) {
+        e.preventDefault();
+
+        let myForm = document.getElementById('myForm');
+
+        let image = myForm.image.value;
+        let avability = myForm.avability.value;
+        let tag = myForm.tag.value;
+        let name = myForm.name.value;
+        let color = myForm.coloraval.value;
+        let price = myForm.price.value;
+
+        if (localStorage.getItem('prodDetail') === null) {
+
+            localStorage.setItem('prodDetail', JSON.stringify([]))
+        }
+
+
+        let prod = {
+
+            image,
+            avability,
+            tag,
+            name,
+            color,
+            price,
+
+        };
+
+        console.log(prod);
+
+        let arr = JSON.parse(localStorage.getItem('prodDetail'));
+
+        arr.push(prod);
+
+        localStorage.setItem('prodDetail', JSON.stringify(arr));
+
+    }
+
+</script>
+
+</html>

@@ -270,7 +270,7 @@ nav ul li {
 }
 .list-footwear img {
   width: 393px;
-  height: 440px;
+  /* height: 440px; */
   margin: 10px;
 }
 .list-footwear div {
