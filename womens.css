@@ -54,7 +54,7 @@ nav {
   /* flex-wrap: nowrap; */
   margin: auto;
   justify-content: space-between;
-  margin-left: 17%;
+  margin-left: 18%;
 }
 
 #nav-text p {
@@ -152,17 +152,19 @@ nav ul li {
 
 /* header section end */
 
-#women-section{
-   padding:18px 0 34px 10px;
+/* womens section */
+
+#women-section {
+  padding: 18px 0 34px 10px;
 }
 
-.women-text{
-   width: 8.5%;
+.women-text {
+  width: 8.5%;
   cursor: pointer;
   padding: 15px;
   margin: 0 25px 0;
   font-size: 22px;
-  font-weight:100;
+  font-weight: 100;
 }
 
 #women-menu {
@@ -170,13 +172,113 @@ nav ul li {
   /* flex-wrap: nowrap; */
   margin: auto;
   justify-content: space-between;
-  margin-left: 16%;
+  margin-left: 17%;
 }
 
 #women-menu p {
-  margin: 20px;
+  margin: 20px 20px 0;
   cursor: pointer;
   position: relative;
+}
+
+#image1 img {
+  width: 93%;
+  margin-left: 38px;
+  margin-right: 38px;
+  margin-bottom: 10px;
+}
+
+#content {
+  margin-top: 30px;
+}
+
+.heading-2 {
+  font-family: Helvetica;
+  font-size: 72px;
+  font-weight: bolder;
+  /* list-style: 0.833333;
+      */
+  line-height: 1.2;
+  /* text-transform: uppercase; */
+  letter-spacing: -5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* .heading-1 {
+   font-family: sans-serif;
+   font-size: 16px;
+   font-weight: 550;
+   line-height: 1.5;
+   cursor: pointer;
+   margin-top: 20px;
+ } */
+
+.heading-0 {
+  font-weight: 100;
+  margin-top: 13px;
+}
+
+#btnn {
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 8px 28px;
+  border-radius: 20px;
+  font-size: 18px;
+  background: #111;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(126, 123, 123);
+}
+
+/* footwear Section */
+
+.content-header {
+   text-align: left;
+   font-size: 22px;
+   margin-top: 80px;
+   margin-left: 70px;
+ }
+
+.list-footwear {
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  scrollbar-color: #757575 transparent;
+  padding-bottom: 30px;
+  transition: 0.3s;
+  margin: 10px 50px;
+}
+.list-footwear img {
+  width: 393px;
+  height: 440px;
+  margin: 10px;
+}
+.list-footwear div {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.list-footwear span {
+  margin-left: 154px;
+  margin-top: 10px;
+}
+
+.list-footwear p {
+  margin-top: 0.5px;
+  margin-left: 12px;
+  color: #6b6e70;
+  line-height: 1.45;
+}
+
+.list-footwear .highlight {
+  color: #111;
 }
 
 /* footer section start */
