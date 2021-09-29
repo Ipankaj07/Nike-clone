@@ -70,13 +70,13 @@
 
         <!-- Header part till End -->
 
-        <!-- from script -->
+        <!--append from script -->
 
         <div id="text-sort">
             <p>Women's Clothing (21)</p>
             <label>Price :</label>
-            <p> <button>High to Low</button> </p>
-            <p> <button>Low to High</button> </p>
+            <p> <button onclick="sortHL()">High to Low</button> </p>
+            <p> <button onclick="sortLH()">Low to High</button> </p>
         </div>
 
         <div id="cloth-details"></div>
@@ -210,9 +210,11 @@
     // let cart = JSON.parse(localStorage.getItem("prodDetail"));
     // console.log(cart);
 
+    function showProducts(d) {
 
-    function showProducts() {
-        prodDetail.forEach(function (product) {
+        parent.innerHTML = null;
+
+        d.forEach(function (product) {
 
             let div = document.createElement('div');
 
@@ -240,6 +242,10 @@
 
             product_price.textContent = "$ " + product.price;
 
+            //    let abc = product_price.textContent.split("$ ").map(Number).join("");
+
+            // console.log(+abc);
+
             // let addtocart_btn = document.createElement('button');
 
             // addtocart_btn.innerText = "Add to Cart";
@@ -257,5 +263,25 @@
 
     }
 
-    showProducts();
+    showProducts(prodDetail);
+
+    function sortHL() {
+        let arr = prodDetail.sort(function (a, b) {
+            return b.price - a.price;
+        })
+        showProducts(arr);
+        // console.log(arr);
+    }
+
+
+
+    function sortLH() {
+        let arr = prodDetail.sort(function (a, b) {
+            return a.price - b.price;
+        })
+        showProducts(arr);
+        // console.log(arr);
+    }
+
+
 </script>
