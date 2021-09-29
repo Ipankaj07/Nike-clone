@@ -5,14 +5,6 @@
   font-family: sans-serif;
 }
 
-body {
-  /* background-color: black;
-      color: white; */
-  min-width: 1286px;
-  max-width: 1440px;
-  font-family: sans-serif;
-}
-
 #top-header {
   padding: 2px 0;
   background-color: #f5f5f5;
@@ -32,13 +24,14 @@ body {
   margin-left: 13px;
   cursor: pointer;
 }
+
 #above-nav img {
   width: 25px;
   margin-right: 81%;
   cursor: pointer;
 }
 
-.container {
+#container {
   width: 100%;
   /* height: 100vh; */
   text-align: center;
@@ -140,49 +133,6 @@ nav ul li {
   border-radius: 50%;
 }
 
-#first-img-id {
-  width: 90%;
-  margin: 0 60px 25px;
-}
-
-#just-do-it {
-  margin: 20px 50px;
-  width: 90%;
-  /* margin-left:5%; */
-  /* margin-right: 60%; */
-}
-
-#just-do-it1 {
-  margin: 20px 50px;
-  width: 90%;
-  /* margin-left:5%; */
-  /* margin-right: 60%; */
-}
-
-.heading-1 {
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 550;
-  line-height: 1.5;
-  cursor: pointer;
-}
-
-.heading-2 {
-  font-family: Helvetica;
-  font-size: 72px;
-  font-weight: bolder;
-  /* list-style: 0.833333;
-     */
-  line-height: 1.2;
-  /* text-transform: uppercase; */
-  letter-spacing: -5px;
-  cursor: pointer;
-}
-
-.heading-0 {
-  font-weight: 100;
-}
-
 .slide {
   padding: 10px;
 }
@@ -200,108 +150,33 @@ nav ul li {
   cursor: pointer;
 }
 
-.btn {
-  padding: 8px 28px;
-  border-radius: 20px;
-  font-size: 18px;
-  background: #111;
-  color: #fff;
-  margin-top: 10px;
-  font-weight: 500;
-  cursor: pointer;
-}
-.btn:hover {
-  background-color: rgb(126, 123, 123);
+/* header section end */
+
+#women-section{
+   padding:18px 0 34px 10px;
 }
 
-.content-header {
-  text-align: left;
+.women-text{
+   width: 8.5%;
+  cursor: pointer;
+  padding: 15px;
+  margin: 0 25px 0;
   font-size: 22px;
-  margin-top: 100px;
-  margin-left: 70px;
+  font-weight:100;
 }
 
-.trending {
+#women-menu {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-.trending img {
-  margin-right: -120px;
-  width: 81%;
-  height: 100%;
-  margin: 35px 60px;
-  object-fit: cover;
-}
-
-.list-footwear {
-  display: flex;
-  flex-direction: row;
-  overflow: scroll;
-  scrollbar-color: #757575 transparent;
-  padding-bottom: 30px;
-  transition: 0.3s;
-  margin: 10px 50px;
-}
-.list-footwear img {
-  width: 393px;
-  height: 440px;
-  margin: 10px;
-}
-.list-footwear div {
-  text-align: left;
-  margin-top: 20px;
-}
-
-.list-footwear span {
-  margin-left: 154px;
-  margin-top: 10px;
-}
-
-.list-footwear p {
-  margin-top: 0.5px;
-  margin-left: 12px;
-  color: #6b6e70;
-  line-height: 1.45;
-}
-
-.list-footwear .highlight {
-  color: #111;
-}
-
-.last-img {
-  display: flex;
-  flex-direction: row;
-}
-
-.last-img img {
-  width: 97%;
-  /* height: 560px; */
-  margin: 30px 62px 30px;
-  /* object-fit:contain; */
-  /* margin-right: 50px
-    margin-left: 50px */
-}
-
-.last-img div:nth-child(3) {
-  margin-right: 110px;
-}
-
-#above-footer {
-  display: flex;
-  flex-direction: row;
+  /* flex-wrap: nowrap; */
+  margin: auto;
   justify-content: space-between;
-  margin-left: 200px;
-  margin-right: 200px;
-  font-size: 17px;
-  margin-bottom: 40px;
+  margin-left: 16%;
 }
-#above-footer li {
-  /* text-decoration: none; */
-  font-size: 15px;
-  margin: 28px;
-  color: #494b4d;
+
+#women-menu p {
+  margin: 20px;
   cursor: pointer;
+  position: relative;
 }
 
 /* footer section start */
@@ -324,7 +199,7 @@ nav ul li {
   row-gap: 10px;
   /* text-transform: uppercase; */
   /* margin: 20px;
-  padding: 20px; */
+   padding: 20px; */
 
   font-size: 10px;
   line-height: 2;
