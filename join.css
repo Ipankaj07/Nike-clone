@@ -46,7 +46,7 @@
   padding: 55px;
   box-sizing: border-box;
   /* backface-visibility: hidden; */
-  border: 1px solid rgb(197, 179, 179);
+  /* border: 1px solid rgb(197, 179, 179); */
   margin: 60px 0;
 }
 
