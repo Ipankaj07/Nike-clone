@@ -222,13 +222,14 @@ nav ul li {
 
 .btn {
   padding: 8px 28px;
-  border-radius: 20px;
+  border-radius: 21px;
   font-size: 18px;
   background: #111;
   color: #fff;
   margin-top: 10px;
   font-weight: 500;
   cursor: pointer;
+  border: 0.01px solid black;
 }
 .btn:hover {
   background-color: rgb(126, 123, 123);

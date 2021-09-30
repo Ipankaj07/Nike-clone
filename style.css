@@ -213,6 +213,7 @@ nav ul li {
   margin-top: 10px;
   font-weight: 500;
   cursor: pointer;
+  border: 0.01px solid black;
 }
 .btn:hover {
   background-color: rgb(126, 123, 123);
