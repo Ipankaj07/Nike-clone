@@ -165,7 +165,7 @@ nav ul li {
   cursor: pointer;
   padding: 15px;
   margin: 0 25px 0;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 100;
 }
 
@@ -178,7 +178,7 @@ nav ul li {
 }
 
 #women-menu p {
-  margin: 20px 20px 0;
+  margin:4px 20px 0;
   cursor: pointer;
   position: relative;
 }
