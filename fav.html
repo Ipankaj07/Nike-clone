@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fav - Section</title>
+    <link rel="stylesheet" href="fav.css">
+</head>
+
+<body>
+    <!-- icon-script-web (https://ionic.io/ionicons) -->
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <div id="container">
+        <!-- Header part till slideshow -->
+
+        <div id="top-header">
+
+            <!-- header -1 -->
+
+            <div id="above-nav">
+                <img src="Pictures/jordan.png" alt="">
+                <p>Help</p>
+                <p>|</p>
+                <p>Join us</p>
+                <p>|</p>
+                <p>Sign in</p>
+            </div>
+
+            <!-- header -2 -->
+
+            <nav>
+                <img src="Pictures/nike-logo.png" class="logo">
+                <div id="nav-text">
+                    <p>Men</p>
+                    <a href="womens.html" style="text-decoration:none; color:black;">
+                        <p>Women</p>
+                    </a>
+                    <p>Kids</p>
+                    <p>Customise</p>
+                    <p>Sale</p>
+                    <p>SNKRS</p>
+                </div>
+                <ul>
+                    <li>
+                        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+                    </li>
+                    <li>
+                        <a style="color:black; text-decoration:none;" href="fav.html">
+                            <ion-icon name="heart-outline" class="heart"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a style="color:black; text-decoration:none;" href="cart.html">
+                        <ion-icon name="bag-outline" class="bag-icon"></ion-icon>
+                        </a>
+                    </li>
+                    <!-- <li> <img src="nav.png" class="nav-icon"></li> -->
+                </ul>
+            </nav>
+            <!-- <hr> -->
+
+            <!-- slideShow  (Dynamic) -->
+
+            <!-- <div class="slide">
+                  <p id="f1"> FREE DELIVERY</p>
+                  <p id="f2"> Applies to order of $1400 or more. <u>View details </u></p>
+              </div> -->
+        </div>
+
+        <!-- Header part till End -->
+
+        <!-- from script -->
+
+
+        <div class="cart-container">
+            <p style="padding-top: 30px; font-size: 24px; text-align:left; margin-left: 40px;">Favourite </p>
+            <div id="cart_product"></div>
+            <div id="cart-pic"></div>
+        </div>
+
+
+        <!-- END (script) -->
+
+        <!-- footer part start -->
+
+        <div id="footer">
+            <div class="fotter-div">
+                <div class="fotter-text">
+                    <p>FIND A STORE</p>
+                    <p>BECOME A MEMBER</p>
+                    <p>SIGN UP FOR EMAIL</p>
+                    <p>STUDENT DISCOUNTS</p>
+                    <p>SEND US FEEDBACK</p>
+                </div>
+                <div class="fotter-text-1">
+                    <p>GET HELP</p>
+                    <p>Order Status</p>
+                    <p>Delivery</p>
+                    <p>Return</p>
+                    <p>Payment Options</p>
+                    <p>Contact Us on Nike.com Inquiries</p>
+                    <p>Contact Us On All Other Inquiries</p>
+                </div>
+                <div class="fotter-text-1">
+                    <p>ABOUT NIKE</p>
+                    <p>News</p>
+                    <p>Careers</p>
+                    <p>Investors</p>
+                    <p>Sustainability</p>
+                </div>
+                <div id="fotter-icon">
+                    <div>
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </div>
+                    <div>
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </div>
+
+                </div>
+            </div>
+            <hr id="footer-hr">
+            <div id="copyright-section">
+                <div>
+                    <p id="india">
+                        <ion-icon name="location-outline" id="location-icon"></ion-icon>India
+                    </p>
+                    <p>&copy 2021 Nike, inc. All Rights
+                        Reserved</p>
+                </div>
+                <!-- <span>
+                    <ion-icon name="heart"></ion-icon>
+                </span> -->
+                <div id="content-last">
+                    <p>Guides</p>
+                    <p>Terms of Sale</p>
+                    <p>Terms of use</p>
+                    <p>Nike Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer part End -->
+    </div>
+</body>
+
+</html>
+
+
+<script>
+    let parent = document.getElementById("cart_product");
+    let favProduct = JSON.parse(localStorage.getItem("favProd"));
+
+
+    function showProducts() {
+
+        // parent.innerHTML = null;
+
+        favProduct.forEach(function (product) {
+
+            let div = document.createElement('div');
+
+            let img = document.createElement('img');
+
+            img.src = product.image;
+
+            let avab = document.createElement('p');
+
+            avab.textContent = product.avability;
+
+            let tag = document.createElement('p');
+
+            tag.textContent = product.tag;
+
+            let product_name = document.createElement('p');
+
+            product_name.textContent = product.name;
+
+            let color = document.createElement('p');
+
+            color.textContent = product.coloraval;
+
+            let product_price = document.createElement('p');
+
+            product_price.textContent = "$ " + product.price;
+
+            //    let abc = product_price.textContent.split("$ ").map(Number).join("");
+
+            // console.log(+abc);
+
+
+            let addtofav_btn = document.createElement('button');
+
+            addtofav_btn.innerText = "Un-Favourite  " + " \u2764 ";
+
+            addtofav_btn.onclick = function () {
+
+                addtoFav(product);
+
+            };
+
+            div.append(img, avab, tag, product_name, color, product_price, addtofav_btn);
+            parent.append(div);
+
+        });
+
+    }
+
+    showProducts();
+</script>
