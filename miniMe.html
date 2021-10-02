@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>link</title>
+    <style>
+        
+       #container{
+           display:flex;
+       }
+       #dy{
+           display:flex;
+       }
+       
+       #container>div:nth-child(1){
+           height:700px;
+           width:60%;
+       }
+       #container>div:nth-child(2){
+           height:700px;
+           width:40%;
+       }
+       #cont{
+            display: grid;
+            gap:20px;
+            grid-template-columns: 400px 400px   ;
+            grid-template-rows: 400px 400px 400px 400px 400px;
+            
+        }
+        #cont2{
+            display: grid;
+            gap:20px;
+            grid-template-columns: 30% 30% 30%   ;
+            grid-template-rows: 40px 40px;
+            margin-left: 10%;
+            
+        }
+        button{
+            color: white;
+            background-color: black;
+            border-radius: 25px;
+            width: 60%;
+            height: 60px;
+            text-align: center;
+            margin-left: 20%;
+        }
+        .para{
+            width: 70%;
+            line-height: 150%;
+            margin-left: 15%;
+
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+        <div id="cont" >
+            <div ><img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/045245f9-31e6-4f8c-af6d-77cc111b2597/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS" id="dyimage"/></div>
+            <div><img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/ac425999-82e1-4a42-a7fb-8594865204a1/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"/></div>
+            <div> <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/9f974023-2cd8-4b51-a871-08bae33e6944/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS"/> </div>
+            <div> <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3e793e27-3ac4-42d2-a70e-ad67db1a9cb2/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS" alt="KIDS"/> </div>
+            <div> <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/3e793e27-3ac4-42d2-a70e-ad67db1a9cb2/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS" alt="KIDS"/> </div>
+            <div> <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/b4f12369-d388-492b-9abc-14128dbd3d16/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS" alt="KIDS"/> </div>
+            <div>  <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/42d1cb65-7b50-4612-b9bd-d453ec666599/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS" alt="KIDS"/></div>
+            <div> <img src="https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5,q_80/baa8d8eb-972e-441b-92d9-f5060ef7f195/air-force-1-crater-older-shoe-hWKjZ7.png" height="400px"width="400px"alt="KIDS" alt="KIDS"/> </div>
+        </div>
+        <div>
+    <div id="dydata">
+        <div id="a">Member Access</div>
+        <h2 id="b">Nike Air Force 1 Crater</h2>
+        <div id="c">Older Kids' Shoe</div>
+        <p id="d">6,995</p>
+        <div id="e">incl. of taxes and duties</div>
+    </div>
+          <!--flex box choice-->
+          
+        
+        <div>dfghj</div>
+        <div>cvbn</div>
+        <div id="cont2"><!--size div start-->
+
+            <div>UK 3</div>
+            <div>UK 3.5 </div>
+            <div>UK 4</div>
+            <div>UK 4.5</div>
+            <div>UK 5</div>
+            <div>UK 5.5</div>
+            
+            </div>
+            <button onclick="addtobag()">add to bag</button>
+
+<p class="para">There's a fun secret about the Nike Air Force 1 Crater: It's got sustainable materials from top to bottom.A see-through design
+ provides a peek into the legend of these classic kicks.Plus, super-soft Crater foam is made kid-right and lets you give a little
+  back with every step.These shoes contain at least 20% recycled content by weight.</p>
+
+
+  <li>Colour Shown: Light Lemon Twist/Armoury Navy/White</li>
+  <li>Style: DH4339-700</li>
+  <select asdfghjk></select>
+  </body>
+</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+let image = document.getElementById("dyimage").src
+let a = document.getElementById("a").textContent
+let b = document.getElementById("b").textContent
+let c = document.getElementById("c").textContent
+let d = document.getElementById("d").textContent
+let e = document.getElementById("e").textContent
+console.log({image,a,b,c,d,e})
+
+if(localStorage.getItem("bag")===null){
+    localStorage.setItem("bag", JSON.stringify([]))
+}
+function addtobag(){
+let product_bag = JSON.parse(localStorage.getItem("bag"))
+product_bag.push({image,a,b,c,d,e});
+
+localStorage.setItem("bag", JSON.stringify(product_bag));
+    console.log("product_bag:",product_bag)
+}
+</script>
