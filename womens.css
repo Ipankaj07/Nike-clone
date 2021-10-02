@@ -252,6 +252,7 @@ nav ul li {
   padding-bottom: 20px;
   transition: 0.3s;
   margin: 10px 50px;
+  cursor: pointer;
 }
 .list-footwear img {
   width: 393px;
