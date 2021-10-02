@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bag</title>
+    
+    <style>
+    </style>
+
+</head>
+<body>
+
+   <h1>welcome</h1>
+   <div id="product"></div>
+    
+    <script>
+//get data from localstorage
+let parent = document.getElementById("product")
+
+let bag=JSON.parse(localStorage.getItem("bag"));
+function showProduct(){
+bag.forEach(element => {
+  let maindiv= document.createElement("div")
+  maindiv.style.display="flex"
+     //for image---------------------------------------------
+    //creating image tag
+    let div1=document.createElement("div")
+    let img= document.createElement("img")
+    img.height=200
+    img.width=200
+    //asigning src value
+    img.src=element.image
+    //console.log(img)
+                                                                                                                         //element.image
+    div1.append(img) 
+    maindiv.append(div1)
+    //for image---------------------------------------------
+
+    //for data---------------------------------------------  
+    let div2=document.createElement("div")
+
+    let div21=document.createElement("div")
+
+    let head1=document.createElement("h2")
+
+    let div22=document.createElement("div")
+
+    let p1=document.createElement("p")
+
+    let div23=document.createElement("div")
+
+div21.textContent=element.a
+head1.textContent=element.b
+div22.textContent=element.c
+p1.textContent=element.d
+div23.textContent=element.e
+div2.append(div21,head1,div22,p1,div23)
+maindiv.append(div2)
+
+parent.append(maindiv)
+                                                                                                                      
+    
+});
+}
+showProduct()
+
+
+    </script>
+</body>
+</html>
