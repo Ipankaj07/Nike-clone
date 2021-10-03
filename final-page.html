@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart - Section </title>
-    <link rel="stylesheet" href="cart.css">
+    <title></title>
+    <link rel="stylesheet" href="final-page.css">
+    <link href="Pictures/favicon-32x32.png" rel="icon" type="image/x-icon" />
 </head>
 
 <body>
@@ -21,17 +22,15 @@
         <div id="top-header">
 
             <!-- header -1 -->
-
-            <div id="above-nav">
-                <img src="Pictures/jordan.png" alt="">
-                <p>Help</p>
-                <p>|</p>
-                <a style="color:black; text-decoration:none;"  href="join-us-page.html">
+            <!--     
+                <div id="above-nav">
+                    <img src="Pictures/jordan.png" alt="">
+                    <p>Help</p>
+                    <p>|</p>
                     <p>Join us</p>
-                </a>
-                <p>|</p>
-                <p>Sign in</p>
-            </div>
+                    <p>|</p>
+                    <p>Sign in</p>
+                </div> -->
 
             <!-- header -2 -->
 
@@ -49,19 +48,13 @@
                 </div>
                 <ul>
                     <li>
-
                         <ion-icon name="search-outline" class="search-icon"></ion-icon>
-
                     </li>
                     <li>
-                        <a style="color:black; text-decoration:none;" href="fav.html">
-                            <ion-icon name="heart-outline" class="heart"></ion-icon>
-                        </a>
+                        <ion-icon name="heart-outline" class="heart"></ion-icon>
                     </li>
                     <li>
-                        <a style="color:black; text-decoration:none;" href="cart.html">
-                            <ion-icon name="bag-outline" class="bag-icon"></ion-icon>
-                        </a>
+                        <ion-icon name="bag-outline" class="bag-icon"></ion-icon>
                     </li>
                     <!-- <li> <img src="nav.png" class="nav-icon"></li> -->
                 </ul>
@@ -71,31 +64,34 @@
             <!-- slideShow  (Dynamic) -->
 
             <!-- <div class="slide">
-                  <p id="f1"> FREE DELIVERY</p>
-                  <p id="f2"> Applies to order of $1400 or more. <u>View details </u></p>
-              </div> -->
+                      <p id="f1"> FREE DELIVERY</p>
+                      <p id="f2"> Applies to order of $1400 or more. <u>View details </u></p>
+                  </div> -->
         </div>
 
         <!-- Header part till End -->
 
-        <!-- from script -->
-
-        <div class="cart-container">
-            <p style="padding-top: 30px; font-size: 24px; text-align:left; margin-left: 40px;">Cart </p>
-            <div id="cart_product"></div>
-            <div id="cart-pic"></div>
+        <div id="body">
+            <div id="first-pic">
+            </div>
+            <div class="box">
+                <div id="div-div">
+                    <p>Oder Value : ₹ 6,245.00</p>
+                    <p>Your Order is on its way.</p>
+                    <p>Ordered 4 Oct 2019 - Order #CFGDYT67 </p>
+                    <p>Purchased Online <span class="dot"></span></p>
+                    <a href="index.html">
+                        <p><button style="cursor: pointer; padding:10px; margin: 20px;">Checkout again</button></p>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <!-- END (script) -->
-
         <!-- footer part start -->
 
         <div id="footer">
             <div class="fotter-div">
                 <div class="fotter-text">
-                    <a style="color:white; text-decoration:none;" href="findaStore.html">
-                        <p>FIND A STORE</p>
-                    </a>
+                    <p>FIND A STORE</p>
                     <p>BECOME A MEMBER</p>
                     <p>SIGN UP FOR EMAIL</p>
                     <p>STUDENT DISCOUNTS</p>
@@ -143,8 +139,8 @@
                         Reserved</p>
                 </div>
                 <!-- <span>
-                    <ion-icon name="heart"></ion-icon>
-                </span> -->
+                <ion-icon name="heart"></ion-icon>
+            </span> -->
                 <div id="content-last">
                     <p>Guides</p>
                     <p>Terms of Sale</p>
@@ -160,10 +156,9 @@
 
 </html>
 
-
-
 <script>
-    let parent = document.getElementById("cart_product");
+
+    let parent = document.getElementById("first-pic");
     let cart = JSON.parse(localStorage.getItem("prodDetail"));
 
 
@@ -179,41 +174,20 @@
 
             img.src = product.image;
 
-            let avab = document.createElement('p');
+            let name = document.createElement('p');
+            name.textContent = product.name;
 
-            avab.textContent = product.avability;
+            let price = document.createElement('p');
+            price.textContent = "₹ 5,497.00"
 
             let tag = document.createElement('p');
 
             tag.textContent = product.tag;
 
-            let product_name = document.createElement('p');
 
-            product_name.textContent = product.name;
-
-            let color = document.createElement('p');
-
-            color.textContent = product.coloraval;
-
-            let product_price = document.createElement('p');
-
-            product_price.textContent = "$ " + product.price;
-
-            //    let abc = product_price.textContent.split("$ ").map(Number).join("");
-
-            // console.log(+abc);
-
-            let addtocart_btn = document.createElement('button');
-
-            addtocart_btn.innerText = "Remove from Bag";
-
-            addtocart_btn.onclick = function () {
-
-                addtoCart(product);
-
-            };
-
-            div.append(img, avab, tag, product_name, color, product_price, addtocart_btn);
+            // let final_price = document.createElement('p');
+            // final_price.textContent = "Oder Value : ₹6,245.00"
+            div.append(img, name, tag, price);
             parent.append(div);
 
         });
