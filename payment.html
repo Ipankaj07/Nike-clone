@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            padding: 10%;
+        }
+        #parent{
+            display: flex;
+        }
+        input{
+            margin: 5px;
+        }
+        .font{
+            color: #a5a5a5;
+        }
+        button{
+            height:60px;
+            width:400px;
+            text-align: left;
+            font-size: medium;
+            background-color: white;
+            margin: 4px;
+            border-radius: 10px;
+        }
+        #promo{
+            height: 60px;
+            width: 80%;
+            text-align: left;
+            font-size: medium;
+            background-color: white;
+        }
+        #product{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div>
+    <h3>Have a promo code?</h3>
+    <input type="text" id="promo" placeholder="Promo">fghjk
+    <button onclick="apply()">aplly</button>
+    <h3>payment</h3>
+    <button id="cr"onclick="crcard()">credit cad</button>
+   
+    <div id="payment"></div>
+   
+</div>
+<div id="summary"> 
+    <h2>summary</h2>  
+    <h3 id=subtotal>subtotal ₹</h3>
+    <p id="esti">Estimated delivery and handling  ₹</p>
+   
+   
+ <hr>
+ <p id="totall">total ₹</p>
+ <hr>
+<span id="product"></span>
+
+</div>
+
+</body>
+</html>
+<script>
+   
+let div1 = document.getElementById("payment");
+
+let p1 = document.createElement("h3")
+p1.textContent="Enter your payment details"
+
+let input1=document.createElement("input");
+input1.placeholder="Name on card"
+input1.type="text"
+//input1.style.backgroundColor="blue"
+input1.style.height="40px"
+input1.style.width="85%"
+
+let input2=document.createElement("input")
+input2.placeholder="card Number"
+input2.type="number"
+input2.style.height="40px"
+input2.style.width="85%"
+
+
+let input3=document.createElement("input")
+input3.type="month"
+input3.style.height="40px"
+input3.style.width="40%"
+input3.style.marginLeft="12px"
+
+
+let input4=document.createElement("input")
+input4.placeholder="CVV"
+input4.type="number"
+input4.style.height="40px"
+input4.style.width="40%"
+
+
+let p2 = document.createElement("p");
+p2.textContent="by clicking place order you agree to e-Shop World tearms and conditions"
+p1.style.color=" #a5a5a5;"
+
+let btn = document.createElement("button");
+btn.innerText="Place Order"
+btn.style.height="80px"
+btn.style.backgroundColor="black"
+btn.style.color="white"
+btn.style.textAlign="center"
+btn.style.width="200px"
+//let butn=document.getElementById("btn-cont")
+btn.addEventListener("click",function(){
+
+    location.href="file:///C:/Users/91843/OneDrive/Desktop/construct-1.html/waste.html"
+    let a=getElementById("p2")
+    console.log()
+
+})
+
+
+div1.append(p1,input1,input2,input3,input4,p2,btn)
+
+
+
+
+
+    let detail =JSON.parse(localStorage.getItem("pdata"));
+    console.log(detail[detail.length-1])
+
+    let subtotall=detail[detail.length-1].price
+    
+    let ed=detail[detail.length-1].dcharge
+    
+    let total=detail[detail.length-1].total
+    
+    console.log(subtotall,ed,total)
+
+  
+
+esti.append(ed)
+
+totall.append(total)
+
+    let parent2 = document.getElementById("product")    
+let bag=JSON.parse(localStorage.getItem("bag"));
+bag.forEach(element => {
+  let maindiv= document.createElement("div")
+  maindiv.style.display="flex"
+     //for image---------------------------------------------
+    //creating image tag
+    let div1=document.createElement("div")
+    let img= document.createElement("img")
+    img.height=200
+    img.width=200
+    //asigning src value
+    img.src=element.image
+    //console.log(img)
+                                                                                                                         //element.image
+    div1.append(img) 
+    maindiv.append(div1)
+    //for image---------------------------------------------
+
+    //for data---------------------------------------------  
+    let div2=document.createElement("div")
+    div2.style.color="#7c7c7c"
+
+    let div21=document.createElement("div")
+    div21.style.color="#7c7c7c"
+
+    let head1=document.createElement("h2")
+    head1.style.color="#7c7c7c"
+
+    let div22=document.createElement("div")
+    div22.style.color="#7c7c7c"
+
+    let p1=document.createElement("p")
+    p1.style.color="#7c7c7c"
+
+    let div23=document.createElement("div")
+    div23.style.color="#7c7c7c"
+
+div21.textContent=element.a
+head1.textContent=element.b
+div22.textContent=element.c
+p1.textContent=element.d//price of item
+
+//console.log(element.d)
+//console.log(Number(element.d))
+//console.log(cost)
+
+div23.textContent=element.e
+div2.append(div21,head1,div22,p1,div23)
+maindiv.append(div2)
+
+parent2.append(maindiv)
+
+
+                                                                                                
+    
+});
+
+function apply(){
+let code = document.getElementById("promo").innerText
+console.log(code)
+}
+
+subtotal.append(subtotall)
+
+</script>
