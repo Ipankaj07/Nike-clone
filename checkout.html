@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .box{
+            margin:0 10% 0 10%;
+            display: flex;
+        }
+        .box1{
+            width: 40%;
+            display: inline-block;
+            margin: 0 7% 0 1%;
+           vertical-align: top;
+            /* background-color: violet; */
+        }
+        #one{
+            
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 5px;
+            flex-grow: 80;
+            flex-direction: column;
+        }
+        input{
+            height: 55px;
+            border-radius: 5px;
+            border: 1px solid rgb(196, 194, 194);
+            font-size: 17px;
+            color: grey;
+            padding: 0 0 0 10px;
+        }
+        option{
+            color: grey;
+        }
+        label{
+            color: grey;
+            margin: 5px 0 0 10px;
+            font-size: 13px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        p{
+            font-size: 23px;
+            margin: 10x 10px 10px 10px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        
+        a{
+             text-decoration: none; 
+             color: black;
+             font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        #a11{
+            color: rgb(155, 155, 155);
+            text-decoration: 1px rgb(155, 155, 155) underline;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .member{
+            width: 40%;
+            height: 45px;
+            background-color: white;
+            border-radius: 25px;
+            border: 1px solid rgb(196, 194, 194);
+            font-size: 16px;
+            margin: 10px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .login{
+            width: 20%;
+            height: 45px;
+            background-color: white;
+            border-radius: 25px;
+            border: 1px solid rgb(196, 194, 194);
+            font-size: 16px;
+            margin: 10px 10px 0 10px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .deliver{
+            height: 80px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px 10px 30px 0;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+            /* justify-content: center; */
+
+        }
+        .indiv1{
+            display: inline-block;
+            width: 15px;
+            height: 25px;
+            margin: 30px 30px 10px 10px;
+           
+        }
+        .indiv2{
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            font-size: 17px;
+            /* text-align: center; */
+            margin: 20px 10px 20px 0px;
+            padding-top: 10px;
+            vertical-align: top;
+        }
+        .info{
+            color: rgb(155, 155, 155);
+            font-size: 17px;
+            line-height: 1.5;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .get_order{
+            font-size: 23px;
+            margin: 10x 10px 10px 10px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        .size{
+            width: 50%;
+            height: 60px;
+            display: flex;  
+            border-radius: 5px;
+            font-size: 17px;
+            color: grey;
+            padding: 0 0 0 5px;
+        }
+         #pcode, #locality, #state, #a1, #country{
+             flex-wrap: nowrap; 
+             flex-grow: 1;
+             flex-basis: 5px;
+             
+             margin: 0 20px 10px 0;
+        }
+        select{
+            margin: 0 20px 0 0;
+            border: white;
+            font-size: medium;
+            width: 200px;
+            height: 40px;
+            vertical-align: top;
+        }
+        #state{
+            border-radius: 10px;
+            height: 100%;;
+            color: grey;
+            
+        }
+        .enter{
+            display: inline-block;
+        }
+        #pcode{
+            margin: 1px 5px 0 0;
+            padding-inline-end: 1px;
+        }
+        #pin{
+            margin: 0 5px 0 15px;
+            font-size: 11px;
+        }
+        #locality{
+            margin: 1px 5px 0 0;
+            padding-inline-end: 1px;
+        }
+        #local{
+            margin: 0 5px 0 15px;
+            font-size: 11px;
+        }
+        #a1 {
+            margin: 5px 5px 0 15px;
+            font-size: 12px;
+            text-decoration: none;
+            color: grey;
+        }
+        .a1 {
+            margin: 5px 5px 0 15px;
+            font-size: 12px;
+            text-decoration: none;
+            color: grey;
+        }
+
+        .split1{
+            width: 60%; 
+            display: inline-block;
+            text-align: left;
+            justify-content: left;
+           
+        }
+        .split2{
+            width: 25%;
+            display: inline-block;
+            text-align: right;
+            justify-content: right;
+        }
+        .split{
+            /* margin-right: 190px; */
+            margin-left: 30px;
+             text-align: left;
+             font-size: 28px;
+             padding-bottom: 5px;
+            /* justify-content: left; */
+        }
+        .text_light{
+            color: rgb(155, 155, 155);
+        }
+        #email{
+            margin: 10px 0 0 0;
+        }
+        
+        .inbox1{
+            display: inline-block;
+
+        }
+        #checkbox{
+
+            
+            display: inline-block;
+            margin: 1px 10px 0 0;
+        }
+        #checkinfo{
+           
+            display: inline-block;
+            font-size: 13px;
+            color: rgb(155, 155, 155);
+            vertical-align: top;
+            margin: 15px 5px 5px 0;
+        }
+        #continue{
+            height: 50px;
+            border-radius: 30px;
+            color: rgb(155, 155, 155);
+            font-size: 20px;
+        }
+        #btn{
+            width: 100%;
+            height: 50px;
+            border-radius: 30px;
+            color: rgb(155, 155, 155);
+            font-size: medium;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+            border: white;
+            
+        }
+        .summary{
+            font-size: 23px;
+            margin: 10x 10px 10px 10px;
+            padding-top: 20px;
+            font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+        }
+        #col{
+            color: rgb(155, 155, 155);
+        }
+        hr{
+            background-color: rgb(230, 230, 230);
+            border: 1px solid rgb(230, 230, 230);
+        }
+        #country::placeholder{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <!-- <h1>Guest Checkout</h1> -->
+    <div class="box">
+        <div class="box1">
+            <div >
+                <h1></h1>
+                <div class="get_order">How would you like to get your order?</div>
+                <div class="info">Customs regulation for India require a copy of the recipient's KYC. The address on the KYC needs to match the shipping address. Our courier will contact you via SMS/email in due course to obtain a copy of your KYC. The KYC will be stored securely and used solely for the purpose of clearing customs (including sharing it with customs officials) for this order, future orders, and any product returns. <a id="a11" href="learn_more.html">Learn More</a></div>
+            </div>
+            <br>
+            <div class="deliver">
+                <div class="indiv1"><img src ="https://gs-checkout.nike.com/assets/images/delivery.svg?v=42ddc388739bf8b60d15160cd1599a2a" /> </div>
+                <div class="indiv2">Deliver It</div>
+            </div>
+            <button class="member"><a href="join_us.html">Become a Member</a></button><br>
+            <button class="login"><a href="login.html">Login</a></button>
+            <div>
+                <p>Enter your name and address:</p>
+                <form id="one">
+                    
+                        <input type="text" id="fname" placeholder="First Name" name="fname" required><br>
+                        <div id="first"></div><br>
+    
+                    
+                        <input type="text" id="lname" placeholder="Last Name" name="lname" required><br>
+                        <div id="last"></div><br>
+    
+            
+                        <input type="text" id="a1line" placeholder="Address Line 1" name="a1line" required>
+                    <div id="a1">We do not ship to P.O. boxes</div>
+                    <br>
+    
+                    <input type="text" id="a2line" placeholder="Address Line 2" name="a2line" ><br><br>
+    
+                    <input type="text" id="a3line" placeholder="Address Line 3" name="a3line" ><br><br>
+    
+                    <div class="size">
+                        <div class="enter">
+                            <input type="text" id="pcode" placeholder="Postal Code" name="pcode" required><br>
+                            <div id="pin"></div>
+                        </div><br><br>
+                        
+                        <div class="enter">
+                            <input type="text" id="locality" placeholder="Locality" name="locality" required><br>
+                        <div id="local"></div>
+                        </div><br><br>
+                        
+                    </div>
+                    <br><br>
+                    <div class="size">
+                        <!-- <input type="text" id="state" placeholder="State/Territory" name="state" ><br><br> -->
+                        <fieldset style="padding: 1px; border-radius: 5px; border: 1px solid rgb(196, 194, 194); color: rgb(196, 194, 194);">
+                            <legend style="padding: 0px;color: rgb(196, 194, 194);border: white;">State/Territory</legend>
+                            <select  id="state" name="state" required>
+                                <option>State/Territory</option>
+                                <option>Andaman and Nicobar Islands</option>
+                                <option>Andhra Pradesh</option>
+                                <option>Arunachal Pradesh</option>
+                                <option>Assam</option>
+                                <option>Bihar</option>
+                                <option>Chandigarh</option>
+                                <option>Chhattisgarh</option>
+                                <option>Dadra and Nagar Haveli</option>
+                                <option>Daman and Diu</option>
+                                <option>Delhi</option>
+                                <option>Goa</option>
+                                <option>Gujarat</option>
+                                <option>Haryana</option>
+                                <option>Himachal Pradesh</option>
+                                <option>Jammu and Kashmir</option>
+                                <option>Jharkhand</option>
+                                <option>Karnataka</option>
+                                <option>Kerala</option>
+                                <option>Lakshadweep</option>
+                                <option>Madhya Pradesh</option>
+                                <option>Maharashtra</option>
+                                <option>Manipur</option>
+                                <option>Meghalaya</option>
+                                <option>Mizoram</option>
+                                <option>Nagaland</option>
+                                <option>Odisha</option>
+                                <option>Punducherry</option>
+                                <option>Punjab</option>
+                                <option>Rajasthan</option>
+                                <option>Sikkim</option>
+                                <option>Tamil Nadu</option>
+                                <option>Telangana</option>
+                                <option>Tripura</option>
+                                <option>Uttarakhand</option>
+                                <option>Utter Pradesh</option>
+                                <option>West Bengal</option>
+                            </select>
+                        </fieldset>
+                        <label id="stateV"></label> 
+                        
+                        <input type="text" id="country" placeholder="India" name="country" required><br><br>
+                    </div>
+
+                   <p>What's your contact information?</p>
+
+                   <input type="text" id="email" placeholder="Email" name="email" required>
+                   <div class="a1" id="ename">A confirmation email will be sent after checkout.</div><br>
+                    
+                   <input type="text" id="num" placeholder="Phone Number" name="num" required>
+                   <div class="a1" id="no">A carrier might contact you to confirm delivery.</div><br><br>
+
+                   <p>What's your PAN?</p>
+
+                   <input type="text" id="pan" placeholder="PAN" name="pan" required>
+                   <div class="a1" id="pancard">Enter your PAN to enable payment with UPI,Net Banking or local card methods</div><br><br>
+
+                   <div class="inbox1">
+                       <input type="checkbox" name="checkbox" id="checkbox" required/>
+                       <div id="checkinfo">I have read and consent to eShopWorld processing my information in accordance with the <a  id="a11" href="guest.html">Privacy Statement</a> and <a id="a11" href="guest.html">Cookie Policy</a>. eShopWorld is a trusted Nike partner.</div>
+                   </div><br>
+                   <div >
+                    <button id="btn"><a href="file:///C:/Users/91843/OneDrive/Desktop/construct-1.html/payment.html">Continue</a></button>
+                   </div><br><br>
+                </form>
+            </div>
+        </div>
+        <div id="summary"> 
+            <h2>summary</h2>  
+            <h3 id=subtotal>subtotal ₹</h3>
+            <p id="esti">Estimated delivery and handling  ₹</p>
+           
+            <hr>
+           
+       
+         <p id="totall">total ₹</p>
+         <hr>
+         <span id="product"></span>
+                </div>
+   
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let detail =JSON.parse(localStorage.getItem("pdata"));
+    console.log(detail[detail.length-1])
+
+    let subtotall=detail[detail.length-1].price
+    
+    let ed=detail[detail.length-1].dcharge
+    
+    let total=detail[detail.length-1].total
+    
+    console.log(subtotall,ed,total)
+
+    subtotal.append(subtotall)
+
+esti.append(ed)
+
+totall.append(total)
+
+let parent = document.getElementById("product")    
+let bag=JSON.parse(localStorage.getItem("bag"));
+bag.forEach(element => {
+  let maindiv= document.createElement("div")
+  maindiv.style.display="flex"
+     //for image---------------------------------------------
+    //creating image tag
+    let div1=document.createElement("div")
+    let img= document.createElement("img")
+    img.height=200
+    img.width=200
+    //asigning src value
+    img.src=element.image
+    //console.log(img)
+                                                                                                                         //element.image
+    div1.append(img) 
+    maindiv.append(div1)
+    //for image---------------------------------------------
+
+    //for data---------------------------------------------  
+    let div2=document.createElement("div")
+     div2.style.color="#7c7c7c"
+
+    let div21=document.createElement("div")
+    div21.style.color="#7c7c7c"
+
+    let head1=document.createElement("h2")
+    head1.style.color="#7c7c7c"
+
+    let div22=document.createElement("div")
+    div22.style.color="#7c7c7c"
+
+    let p1=document.createElement("p")
+    p1.style.color="#7c7c7c"
+
+    let div23=document.createElement("div")
+    div23.style.color="#7c7c7c"
+
+div21.textContent=element.a
+head1.textContent=element.b
+div22.textContent=element.c
+p1.textContent=element.d//price of item
+
+//console.log(element.d)
+//console.log(Number(element.d))
+//console.log(cost)
+
+div23.textContent=element.e
+div2.append(div21,head1,div22,p1,div23)
+maindiv.append(div2)
+
+parent.append(maindiv)
+
+
+                                                                                                
+    
+});
+
+</script>
