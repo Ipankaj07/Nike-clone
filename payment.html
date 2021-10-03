@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link href="Pictures/favicon-32x32.png" rel="icon" type="image/x-icon" />
+    <style>
+        * {
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+
+        }
+
+        .box {
+            margin: 0 10% 0 10%;
+        }
+
+        .box1 {
+            width: 40%;
+            display: inline-block;
+            margin: 0 7% 0 1%;
+            vertical-align: top;
+            /* background-color: violet; */
+        }
+
+        #one {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 5px;
+            flex-grow: 80;
+            flex-direction: column;
+        }
+
+        input {
+            height: 55px;
+            border-radius: 5px;
+            border: 1px solid rgb(196, 194, 194);
+            font-size: 17px;
+            color: grey;
+            padding: 0 0 0 10px;
+            margin-top: 12px;
+        }
+
+        option {
+            color: grey;
+        }
+
+        label {
+            color: grey;
+            margin: 5px 0 0 5px;
+            font-size: 13px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        p {
+            font-size: 23px;
+            margin: 10x 10px 10px 10px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        #a11 {
+            color: rgb(155, 155, 155);
+            text-decoration: 1px rgb(155, 155, 155) underline;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .member {
+            width: 40%;
+            height: 45px;
+            background-color: white;
+            border-radius: 25px;
+            border: 1px solid rgb(196, 194, 194);
+            font-size: 16px;
+            margin: 10px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .login {
+            width: 20%;
+            height: 45px;
+            background-color: white;
+            border-radius: 25px;
+            border: 1px solid rgb(196, 194, 194);
+            font-size: 16px;
+            margin: 10px 10px 0 10px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .deliver {
+            height: 80px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 5px 10px 30px 0;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            /* justify-content: center; */
+
+        }
+
+        .indiv1 {
+            display: inline-block;
+            width: 15px;
+            height: 25px;
+            margin: 30px 30px 10px 10px;
+
+        }
+
+        .indiv2 {
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            font-size: 17px;
+            /* text-align: center; */
+            margin: 20px 10px 20px 0px;
+            padding-top: 10px;
+            vertical-align: top;
+        }
+
+        .info {
+            color: rgb(155, 155, 155);
+            font-size: 17px;
+            line-height: 1.5;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .get_order {
+            font-size: 23px;
+            margin: 10x 10px 10px 10px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        .size {
+            width: 50%;
+            height: 60px;
+            display: flex;
+            border-radius: 5px;
+            font-size: 17px;
+            color: grey;
+            padding: 0 0 0 5px;
+        }
+
+        #pcode,
+        #locality,
+        #state,
+        #a1,
+        #country {
+            flex-wrap: nowrap;
+            flex-grow: 1;
+            flex-basis: 5px;
+
+            margin: 0 20px 10px 0;
+        }
+
+        /* select {
+            margin: 0 20px 0 0;
+            border: white;
+            font-size: medium;
+            width: 212px;
+            height: 40px;
+            vertical-align: top;
+        } */
+
+
+
+        #state {
+            border-radius: 5px;
+            height: 100%;
+            color: grey;
+            /* width: 183px; */
+            margin-right: -1px;
+        }
+
+        .enter {
+            display: inline-block;
+        }
+
+        #pcode {
+            margin: 1px 5px 0 0;
+            padding-inline-end: 1px;
+            margin-top: 13px;
+        }
+
+        #pin {
+            margin: 0 5px 0 15px;
+            font-size: 11px;
+        }
+
+        #locality {
+            margin: 1px 5px 0 0;
+            padding-inline-end: 1px;
+            margin-top: 13px;
+        }
+
+        #local {
+            margin: 0 5px 0 15px;
+            font-size: 11px;
+            margin-top: 13px;
+        }
+
+        #a1 {
+            margin: 5px 5px 0 15px;
+            font-size: 12px;
+            text-decoration: none;
+            color: grey;
+        }
+
+        .a1 {
+            margin: 5px 5px 0 15px;
+            font-size: 12px;
+            text-decoration: none;
+            color: grey;
+        }
+
+        .split1 {
+            width: 60%;
+            display: inline-block;
+            text-align: left;
+            justify-content: left;
+
+        }
+
+        .split2 {
+            width: 25%;
+            display: inline-block;
+            text-align: right;
+            justify-content: right;
+        }
+
+        .split {
+            /* margin-right: 190px; */
+            margin-left: 30px;
+            text-align: left;
+            font-size: 28px;
+            padding-bottom: 5px;
+            /* justify-content: left; */
+        }
+
+        .logo1 {
+            width: 20px;
+
+        }
+
+        .text_light {
+            color: rgb(155, 155, 155);
+        }
+
+        #email {
+            margin: 10px 0 0 0;
+        }
+
+        .inbox1 {
+            display: inline-block;
+
+        }
+
+        #checkbox {
+
+            width: 3%;
+            display: inline-block;
+            margin: 1px 10px 0 0;
+        }
+
+        #checkinfo {
+            width: 92%;
+            display: inline-block;
+            font-size: 13px;
+            color: rgb(155, 155, 155);
+            vertical-align: top;
+            margin: 15px 5px 5px 0;
+        }
+
+        #continue {
+            height: 50px;
+            border-radius: 30px;
+            color: rgb(155, 155, 155);
+            font-size: 20px;
+        }
+
+        #btn {
+            width: 100%;
+            height: 50px;
+            border-radius: 30px;
+            color: rgb(155, 155, 155);
+            font-size: medium;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            border: white;
+
+        }
+
+        .summary {
+            font-size: 23px;
+            margin: 10x 10px 10px 10px;
+            padding-top: 20px;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+
+        #col {
+            color: rgb(155, 155, 155);
+        }
+
+        hr {
+            background-color: rgb(230, 230, 230);
+            border: 1px solid rgb(230, 230, 230);
+        }
+
+        #country::placeholder {
+            color: black;
+        }
+
+        .arrenge {
+            /* height:42px; */
+            margin-top: 17px;
+            background-color: white;
+            color: rgb(107, 90, 90);
+            border-radius: 4px;
+            border: 1px solid;
+            border: 1px solid rgb(197, 179, 179);
+            padding: 9px;
+            color: rgb(155, 155, 155);
+        }
+
+        .last-img img {
+            width: 50%;
+        }
+
+        #a1 {
+            display: flex;
+        }
+
+        #a2 {
+            margin-top: -251px;
+            text-align: left;
+            margin-left: 228px;
+            font-size: 17px;
+            color: black;
+            line-height: 1.7;
+        }
+
+        input {
+            width: 400px;
+        }
+
+        select {
+            width: 202px;
+
+        }
+
+        .span-text {
+            font-size: 13px;
+            margin-left: 12px;
+            color: rgb(100, 92, 92);
+        }
+
+        #div-0 {
+            display: flex;
+            justify-content: center;
+            /* background-color: blue; */
+            margin-top: 20px;
+        }
+
+        .submit-btn {
+            position: relative;
+            margin-top: 30px;
+            /* padding: 20px; */
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: black;
+            color: #fff;
+            border: 1px solid black;
+            margin: 20px 0 10px;
+            height: 45px;
+            font-size: 15px;
+            border-radius: 4px;
+            padding: 0 10px;
+            box-sizing: border-box;
+            outline: none;
+            cursor: pointer;
+            border-radius: 24px;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(22, 22, 22);
+        }
+
+        .logo2 {
+            width: 300%;
+            background-color: #fff;
+        }
+
+        #div-1 {
+            display: flex;
+            /* justify-content:space-around; */
+        }
+
+        /* #div-1 div {
+            width: 30px
+        } */
+    </style>
+
+
+    <link href="Pictures/favicon-32x32.png" rel="icon" type="image/x-icon" />
+
+</head>
+
+<body>
+    <!-- <h1>Guest Checkout</h1> -->
+    <div class="box">
+        <div class="box1">
+            <br>
+            <p>How would you like to pay?</p>
+            <div class="deliver">
+                <div class="indiv1"><img
+                        src="https://www.seekpng.com/png/detail/147-1471585_credit-card-free-vectors-logos-icons-and.png"
+                        class="logo2" /> </div>
+                <div style="width: 100%; margin-top: -40px ; margin-left: 70px; " class="indiv2">Credit or Debit Card
+                </div>
+            </div>
+            <button class="member"><a href="join-us-page.html">Become a Member</a></button><br>
+            <!-- <button class="login"><a href="login.html">Login</a></button> -->
+            <div>
+                <p>Enter your payment details:</p>
+                <div class="container1">
+                    <div class="card">
+                        <div class="inner-box">
+                            <div class="card-front">
+                                <!-- <img id="logo" src="Pictures/nike-logo.png"> -->
+                                <!-- <h1>Your Account For <br>Everything Nike</h1> -->
+                                <form action="" class="myform" id="form">
+                                    <input type="text" id="fName" class="input-box" placeholder="Name on card" required>
+                                    <input type="text" id="lname" class="input-box" placeholder="Card Number" required>
+                                    <div id="div-1">
+                                        <input style="width:45%" type="text" placeholder="MM/YY">
+
+                                        <input style="width:45%; margin-left:4px" type="password" placeholder="CVV">
+                                    </div>
+                                </form>
+                                <div id="div-0">
+                                    <!-- <input style="width:5%; margin-top : -20px" type="checkbox"> -->
+                                    <div class="span-text">
+
+                                        By clicking Place Order, you agree to the eShopWorld <u> Terms and
+                                            Conditions.</u>
+                                    </div>
+                                </div>
+                                <!-- <a id="anchor1" href="">Forgotten your password?</a>
+                                <p class="text">By logging in, you agree to Nike's <u>Privacy Policy.</u> and <u>Terms
+                                        of
+                                        Use</u>
+                                </p> -->
+                                <button style="margin-left: -11px;" onclick="getProdDetail(event)" type="submit"
+                                    class="submit-btn">Place Order</button>
+                                <!-- <p class="text1"> Not a Member? <a href="join.html">Join Us</a> </p> -->
+                            </div>
+                            <!-- ----------------------------------------------------- -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="box1">
+            <div class="summary">Order Summary</div><br>
+            <div class="split1">
+                <div class="text_light">Subtotal <img
+                        src="https://mikecavaliere.com/wp-content/uploads/2015/05/Question-300x300.png" class="logo1" />
+                </div>
+            </div>
+            <div class="split2">
+                <div id="prod_price" class="text_light">₹5,497.00</div>
+            </div>
+            <br><br>
+            <div class="split1">
+                <div class="text_light">Delivery/Shipping</div>
+            </div>
+            <div class="split2">
+                <div id="del_charge" class="text_light">₹750.00</div>
+            </div><br><br>
+            <hr>
+            <br>
+            <div class="split1">
+                <div>Total</div>
+            </div>
+            <div class="split2">
+                <div id="final_price"><strong>₹6,245.00</strong></div>
+            </div><br><br>
+            <hr>
+            <div id="a1">
+                <div class="last-img">
+                    <h2 style="text-align: left; font-size: 17px; color: black"> Arrives Thu, 14 Oct - Sun, 31 Oct </h2>
+                    <img src="Pictures/www.nike.com-images-86a6bs/06.png">
+                    <div id="a2">
+                        Nike <br> Sportswear <br> Repel Women's
+                        <br>Jacket <br>
+                        Qty 1
+                        <br>
+                        Size M
+                        <br>
+                        ₹5,497.00
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    function getProdDetail(e) {
+        // e.preventDefault();
+        alert("Order Placed!")
+        window.location.href = "final-page.html"
+        // let myform = document.getElementById("myForm");
+        // console.log(myform);
+
+        // let fname = myform.fName.value;
+        // let lname = myform.lName.value;
+        // let a1line = myform.add1.value;
+        // let a2line = myform.add2.value;
+        // let pcode = myform.pcode.value;
+        // let locality = myform.locality.value;
+        // let state = myform.state.value;
+        // let country = myform.country.value;
+        // let email = myform.email.value;
+        // let phnumber = myform.phNum.value;
+
+        // if (localStorage.getItem('address-id') === null) {
+
+        //     localStorage.setItem('address-id', JSON.stringify([]))
+        // }
+
+
+        // let address = {
+
+        //     fName,
+        //     lName,
+        //     add1,
+        //     add2,
+        //     pcode,
+        //     state,
+        //    country,
+        //    email,
+        //    phnumber,
+
+        // };
+
+        // console.log(address);
+
+        // let arr = JSON.parse(localStorage.getItem('address-id'));
+
+        // arr.push(address);
+
+        // localStorage.setItem('address-id', JSON.stringify(arr));
+
+    }
+
+</script>
