@@ -11,11 +11,15 @@ Cloning of [Nike IN](https://nike.com/in)
 ![Screenshot](Screen-Shot/log-in.png)
 * Find a Store
 ![Screenshot](Screen-Shot/findaStore.png)
-## Pages Builds:
-* Home
-* Join Us
-* log in
-* women-section
-* Clothing
-* cart-checkout-payment
-* Find a Store
+
+## Built with 
+
+- HTML
+- CSS
+- JavaScript
+- JSON Fundamental 
+
+## Creators
+
+- [@Pankaj Raj](https://github.com/Ipankaj07)
+- [@suman sakshi](https://github.com/sumansaksh)
